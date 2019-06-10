@@ -19,10 +19,14 @@ tasks: Task[] = [
   new Task('Dinner',2),
   new Task('Cleaning',2)
 ];
-  selectedTask: Task = this.tasks[0];
+  selectedTask =null;
   editTask(clickedTask) {
     this.selectedTask = clickedTask;
   }
+
+  finishedEditing() {
+    this.selectedTask = null;
+  }  
 
   priorityColor(currentTask){
   if (currentTask.priority === 3){
