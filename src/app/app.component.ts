@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Task } from './models/task.model';
+// import { Task } from './models/task.model';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +14,11 @@ export class AppComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
 
-tasks: Task[] = [
-  new Task('Epicodus hw',3),
-  new Task('Dinner',2),
-  new Task('Cleaning',2)
-];
+// tasks: Task[] = [
+//   new Task('Epicodus hw',3),
+//   new Task('Dinner',2),
+//   new Task('Cleaning',2)
+// ];
   selectedTask =null;
   editTask(clickedTask) {
     this.selectedTask = clickedTask;
@@ -26,15 +26,15 @@ tasks: Task[] = [
 
   finishedEditing() {
     this.selectedTask = null;
-  }  
-
-  priorityColor(currentTask){
-  if (currentTask.priority === 3){
-    return "bg-danger";
-  } else if (currentTask.priority === 2) {
-    return  "bg-warning";
-  } else {
-    return "bg-info";
   }
-}
+
+//   priorityColor(currentTask){
+//   if (currentTask.priority === 3){
+//     return "bg-danger";
+//   } else if (currentTask.priority === 2) {
+//     return  "bg-warning";
+//   } else {
+//     return "bg-info";
+//   }
+// }
 }
