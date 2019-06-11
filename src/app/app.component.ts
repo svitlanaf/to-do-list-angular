@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-// import { Task } from './models/task.model';
+import { Component, Input } from '@angular/core';
+import { Task } from './models/task.model';
 
 @Component({
   selector: 'app-root',
@@ -14,11 +14,12 @@ export class AppComponent {
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
 
-// tasks: Task[] = [
-//   new Task('Epicodus hw',3),
-//   new Task('Dinner',2),
-//   new Task('Cleaning',2)
-// ];
+  masterTaskList: Task[] = [
+    new Task('Finish weekend Angular homework for Epicodus course', 3),
+    new Task('Begin brainstorming possible JavaScript group projects', 2),
+    new Task('Add README file to last few Angular repos on GitHub', 2)
+  ];
+
   selectedTask =null;
   editTask(clickedTask) {
     this.selectedTask = clickedTask;
