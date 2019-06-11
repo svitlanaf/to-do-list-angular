@@ -28,14 +28,4 @@ export class AppComponent {
   finishedEditing() {
     this.selectedTask = null;
   }
-
-//   priorityColor(currentTask){
-//   if (currentTask.priority === 3){
-//     return "bg-danger";
-//   } else if (currentTask.priority === 2) {
-//     return  "bg-warning";
-//   } else {
-//     return "bg-info";
-//   }
-// }
 }
